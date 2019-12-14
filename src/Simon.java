@@ -77,38 +77,37 @@ public class Simon implements ActionListener, MouseListener {
 		gp.repaint();
 	}
 
-//	public void paint(Graphics g) {
-//		drawMenuState(g);
-//		g.setColor(Color.BLACK);
-//		g.fillRect(0, 0, width, height);
-//		if (flash == 0) {
-//			g.setColor(Color.GREEN);
-//		} else {
-//			g.setColor(Color.GREEN.darker());
-//		}
-//		g.fillRect(0,  0, 300, 300);
-//		if (flash == 1) {
-//			g.setColor(Color.RED);
-//		} else {
-//			g.setColor(Color.RED.darker());
-//		}
-//		g.fillRect(300, 0, 300, 300);
-//		if (flash == 2) {
-//			g.setColor(Color.YELLOW);
-//		} else {
-//			g.setColor(Color.YELLOW.darker());
-//		}
-//		g.fillRect(0, 290, 300, 300);
-//		if (flash == 3) {
-//			g.setColor(Color.BLUE);
-//		} else {
-//			g.setColor(Color.BLUE.darker());
-//		}
-//		g.fillRect(300, 290, 300, 300);
-//		
-//		
-//		
-//		
-//		
-//	}
+	public void paint(Graphics g) {
+		g.setColor(Color.BLACK);
+		g.fillRect(0, 0, width, height);
+		if (flash == 0) {
+			g.setColor(Color.GREEN);
+		} else {
+			g.setColor(Color.GREEN.darker());
+		}
+		g.fillRect(0,  0, 300, 300);
+		if (flash == 1) {
+			g.setColor(Color.RED);
+		} else {
+			g.setColor(Color.RED.darker());
+		}
+		g.fillRect(300, 0, 300, 300);
+		if (flash == 2) {
+			g.setColor(Color.YELLOW);
+		} else {
+			g.setColor(Color.YELLOW.darker());
+		}
+		g.fillRect(0, 290, 300, 300);
+		if (flash == 3) {
+			g.setColor(Color.BLUE);
+		} else {
+			g.setColor(Color.BLUE.darker());
+		}
+		g.fillRect(300, 290, 300, 300);
+		
+		
+		
+		
+		
+	}
 }
