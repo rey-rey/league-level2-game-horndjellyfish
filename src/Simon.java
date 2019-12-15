@@ -16,23 +16,83 @@ public class Simon implements ActionListener, MouseListener {
 	public int light;
 	public int time;
 	Timer timer = new Timer(20, this);
-	GamePanel gp = new GamePanel();
+	GamePanel gp;
 	public static Simon simon;
+	
 	public static void main(String[] args) {
 		simon = new Simon();
 		simon.create();
 	}
 
 	public void create() {
+		gp = new GamePanel(this);
 		frame.setVisible(true);
 		frame.setSize(600, 600);
 		frame.setResizable(false);
 		frame.addMouseListener(this);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.addKeyListener(gp);
 		frame.add(gp);
 		timer.start();
 
 	}
+
+	public void mousePressed(MouseEvent e) {
+		int x = e.getX();
+		int y = e.getY();
+		if (x > 0 && x < 300 && y > 0 && y < 300) {
+			flash = 0;                   
+			time = 1;
+		} else if (x > 300 && x < width && y > 0 && y < 300) {
+			flash = 1;
+			time = 1;
+		} else if (x > 0 && x < 300 && y > 300 && y < width) {
+			flash = 2;
+			time = 1;
+		} else if (x > 300 && x < width && y > 300 && y < width) {
+			flash = 3;
+			time = 1;
+		}
+
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		time = time + 1;
+		if (time % 20 == 0) {
+			flash = -1;
+		}
+		gp.repaint();
+	}
+
+//	public void paint(Graphics g) {
+//		g.setColor(Color.BLACK);
+//		g.fillRect(0, 0, width, height);
+//		if (flash == 0) {
+//			g.setColor(Color.GREEN);
+//		} else {
+//			g.setColor(Color.GREEN.darker());
+//		}
+//		g.fillRect(0, 0, 300, 300);
+//		if (flash == 1) {
+//			g.setColor(Color.RED);
+//		} else {
+//			g.setColor(Color.RED.darker());
+//		}
+//		g.fillRect(300, 0, 300, 300);
+//		if (flash == 2) {
+//			g.setColor(Color.YELLOW);
+//		} else {
+//			g.setColor(Color.YELLOW.darker());
+//		}
+//		g.fillRect(0, 290, 300, 300);
+//		if (flash == 3) {
+//			g.setColor(Color.BLUE);
+//		} else {
+//			g.setColor(Color.BLUE.darker());
+//		}
+//		g.fillRect(300, 290, 300, 300);
+//
+//	}
 
 	public void mouseClicked(MouseEvent arg0) {
 
@@ -46,68 +106,8 @@ public class Simon implements ActionListener, MouseListener {
 
 	}
 
-	public void mousePressed(MouseEvent e) {
-		int x = e.getX();
-		int y = e.getY();
-		if (x > 0 && x < 300 && y > 0 && y < 300) {
-			flash = 0;
-			time = 1;
-		} else if (x > 300 && x < width && y > 0 && y < 300) {
-			flash = 1;
-			time = 1;
-		} else if (x > 0 && x < 300 && y > 300 && y < width) {
-			flash = 2;
-			time = 1;
-		} else if (x > 300 && x < width && y > 300 && y < width) {
-			flash = 3;
-			time = 1;
-		}
-		
-	}
-
 	public void mouseReleased(MouseEvent e) {
 
 	}
 
-	public void actionPerformed(ActionEvent e) {
-		time = time + 1;
-		if (time%20 == 0) {
-			flash = -1;
-		}
-		gp.repaint();
-	}
-
-	public void paint(Graphics g) {
-		g.setColor(Color.BLACK);
-		g.fillRect(0, 0, width, height);
-		if (flash == 0) {
-			g.setColor(Color.GREEN);
-		} else {
-			g.setColor(Color.GREEN.darker());
-		}
-		g.fillRect(0,  0, 300, 300);
-		if (flash == 1) {
-			g.setColor(Color.RED);
-		} else {
-			g.setColor(Color.RED.darker());
-		}
-		g.fillRect(300, 0, 300, 300);
-		if (flash == 2) {
-			g.setColor(Color.YELLOW);
-		} else {
-			g.setColor(Color.YELLOW.darker());
-		}
-		g.fillRect(0, 290, 300, 300);
-		if (flash == 3) {
-			g.setColor(Color.BLUE);
-		} else {
-			g.setColor(Color.BLUE.darker());
-		}
-		g.fillRect(300, 290, 300, 300);
-		
-		
-		
-		
-		
-	}
 }
