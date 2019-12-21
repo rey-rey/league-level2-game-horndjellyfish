@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/league-level2-game-horndjellyfish.iml" filepath="$PROJECT_DIR$/.idea/league-level2-game-horndjellyfish.iml" />
+      <module fileurl="file://$PROJECT_DIR$/League_Level2_Game.iml" filepath="$PROJECT_DIR$/League_Level2_Game.iml" />
     </modules>
   </component>
 </project>
