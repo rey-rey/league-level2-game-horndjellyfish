@@ -20,23 +20,29 @@ public class GamePanel extends JPanel implements KeyListener {
 	Font subtitleFont = new Font("Impact", Font.PLAIN, 40);
 	Font smaller = new Font("Impact", Font.PLAIN, 20);
 	Simon simon;
-	GamePanel (Simon simon) {
+
+	GamePanel(Simon simon) {
 		this.simon = simon;
 	}
+
+	PatternManager pm = new PatternManager();
+
 	public void drawMenuState(Graphics g) {
 		g.setColor(Color.black);
-		g.fillRect(0,  0,  600,  600);
+		g.fillRect(0, 0, 600, 600);
 		g.setColor(Color.white);
 		g.setFont(titleFont);
 		g.drawString("SIMON", 140, 300);
 		g.setFont(subtitleFont);
 		g.drawString("Press Enter to start", 150, 400);
 		g.setFont(smaller);
-		g.drawString("When the game starts, different colors will light up. When the color", 40, 450);
-		g.drawString("lights up, click that color. As time goes on, the pattern will get", 60, 475);
-		g.drawString("increasingly more complex. Don't press the wrong color!", 80, 500);
+		g.drawString("When the game starts, different colors will light up. When the color", 40, 470);
+		g.drawString("lights up, click that color. As time goes on, the pattern will get", 60, 495);
+		g.drawString("increasingly more complex. Don't press the wrong color!", 80, 520);
 	}
+
 	public void drawGameState(Graphics g) {
+		
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, simon.width, simon.height);
 		if (simon.flash == 0) {
@@ -65,16 +71,38 @@ public class GamePanel extends JPanel implements KeyListener {
 		g.fillRect(300, 290, 300, 300);
 
 	}
+
 	public void drawEndState(Graphics g) {
 		g.setColor(Color.black);
-		g.fillRect(0,  0,  600,  600);
+		g.fillRect(0, 0, 600, 600);
 		g.setColor(Color.WHITE);
 		g.setFont(titleFont);
 		g.drawString("GAME OVER", 30, 300);
 	}
+
 	public void actionPerformed(ActionEvent e) {
+		if (currentState == MENU_STATE) {
+			updateMenuState();
+		} else if (currentState == GAME_STATE) {
+			updateGameState();
+		} else if (currentState == END_STATE) {
+			updateEndState();
+		}
 		repaint();
 	}
+
+	private void updateEndState() {
+
+	}
+
+	private void updateGameState() {
+		
+	}                                                                                              
+                                                                                                      
+	private void updateMenuState() {
+
+	}
+
 	public void paintComponent(Graphics g) {
 		if (currentState == MENU_STATE) {
 			drawMenuState(g);
@@ -84,11 +112,12 @@ public class GamePanel extends JPanel implements KeyListener {
 			drawEndState(g);
 		}
 	}
-	 public void keyTyped(KeyEvent e) {
-		
+
+	public void keyTyped(KeyEvent e) {
+
 	}
 
-	 public void keyPressed(KeyEvent e) {
+	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
 			if (currentState == MENU_STATE) {
 				currentState = GAME_STATE;
@@ -101,7 +130,7 @@ public class GamePanel extends JPanel implements KeyListener {
 	}
 
 	public void keyReleased(KeyEvent e) {
-		
+
 	}
-	
+
 }
