@@ -22,6 +22,7 @@ public class Simon implements ActionListener, MouseListener {
 	public static void main(String[] args) {
 		simon = new Simon();
 		simon.create();
+
 	}
 
 	public void create() {

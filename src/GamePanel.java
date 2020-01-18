@@ -20,12 +20,13 @@ public class GamePanel extends JPanel implements KeyListener {
 	Font subtitleFont = new Font("Impact", Font.PLAIN, 40);
 	Font smaller = new Font("Impact", Font.PLAIN, 20);
 	Simon simon;
-
+	PatternManager pm;
 	GamePanel(Simon simon) {
 		this.simon = simon;
+		pm = new PatternManager(simon);
 	}
 
-	PatternManager pm = new PatternManager();
+
 
 	public void drawMenuState(Graphics g) {
 		g.setColor(Color.black);
@@ -42,7 +43,7 @@ public class GamePanel extends JPanel implements KeyListener {
 	}
 
 	public void drawGameState(Graphics g) {
-		
+
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, simon.width, simon.height);
 		if (simon.flash == 0) {
@@ -69,7 +70,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			g.setColor(Color.BLUE.darker());
 		}
 		g.fillRect(300, 290, 300, 300);
-
+		pm.makePattern();
 	}
 
 	public void drawEndState(Graphics g) {

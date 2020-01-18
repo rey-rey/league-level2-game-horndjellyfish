@@ -13,12 +13,13 @@ public class PatternManager {
 	int UserPick;
 	Simon simon;
 
-	PatternManager() {
-
+	PatternManager(Simon simon) {
+		this.simon = simon;
 	}
 
-	@SuppressWarnings("static-access")
+
 	public void makePattern() {
+		System.out.println("makePattern has been called");
 		CompPick = num.nextInt(4);
 		Computer.add(CompPick);
 		for (int i = 0; i < Computer.size(); i++) {
