@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
 
 import javax.swing.JPanel;
 
@@ -21,12 +22,11 @@ public class GamePanel extends JPanel implements KeyListener {
 	Font smaller = new Font("Impact", Font.PLAIN, 20);
 	Simon simon;
 	PatternManager pm;
+
 	GamePanel(Simon simon) {
 		this.simon = simon;
 		pm = new PatternManager(simon);
 	}
-
-
 
 	public void drawMenuState(Graphics g) {
 		g.setColor(Color.black);
@@ -70,7 +70,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			g.setColor(Color.BLUE.darker());
 		}
 		g.fillRect(300, 290, 300, 300);
-		pm.makePattern();
+		// pm.makePattern();
 	}
 
 	public void drawEndState(Graphics g) {
@@ -97,9 +97,9 @@ public class GamePanel extends JPanel implements KeyListener {
 	}
 
 	private void updateGameState() {
-		
-	}                                                                                              
-                                                                                                      
+
+	}
+
 	private void updateMenuState() {
 
 	}
