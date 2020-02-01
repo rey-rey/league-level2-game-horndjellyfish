@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd3e3548-ce5c-4820-b7d3-cde0d4b06ee0" name="Default Changelist" comment="" />
+    <list default="true" id="cd3e3548-ce5c-4820-b7d3-cde0d4b06ee0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SimonRedButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainSimon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimonMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SimonFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimonFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SimonGPButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimonGPButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SimonGamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimonGamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SimonGreenButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimonGreenButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SimonMenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimonMenuPanel.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +32,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1X6OfBj93aEzM666jQo6mOPIitc" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
@@ -39,14 +52,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MainSimon">
-    <configuration name="MainSimon" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainSimon" />
-      <module name="League_Level2_Game" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Simon" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Simon" />
       <module name="League_Level2_Game" />
@@ -54,9 +60,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SimonMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SimonMain" />
+      <module name="League_Level2_Game" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainSimon" />
+        <item itemvalue="Application.SimonMain" />
         <item itemvalue="Application.Simon" />
       </list>
     </recent_temporary>
@@ -91,24 +104,34 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/GamePanel.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/SimonMenuPanel.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="8" />
+          <line>43</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SimonGPButton.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="10" />
+          <url>file://$PROJECT_DIR$/src/SimonMenuPanel.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SimonGreenButton.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="12" />
+          <url>file://$PROJECT_DIR$/src/SimonMenuPanel.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SimonGreenButton.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="13" />
+          <url>file://$PROJECT_DIR$/src/GamePanel.java</url>
+          <line>119</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SimonMenuPanel.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -15,17 +15,20 @@ public class SimonGamePanel extends JPanel {
     protected static final int BUTTON_WIDTH = SimonFrame.WIDTH/2;
     protected static final int BUTTON_HEIGHT = SimonFrame.HEIGHT/2;
 
-    SimonGPButton greenButton = new SimonGreenButton();
+    SimonGPButton _greenButton = new SimonGreenButton();
+    SimonGPButton _redButton = new SimonRedButton();
 
-    public SimonGamePanel() {
-       super();
-    }
+    // paint the Game Panel
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.setColor(Color.BLACK);
-        g.fillRect(0, 0, 600, 600);
 
-        greenButton.paintComponent(g);
+        // paint the background
+        g.setColor(Color.BLACK);
+        g.fillRect(0, 0, PANEL_SIZE, PANEL_SIZE);
+
+        // paint the buttons
+        _greenButton.paintComponent(g);
+        _redButton.paintComponent(g);
     }
 
 }

@@ -1,14 +1,14 @@
 import java.awt.*;
 
-public class SimonGreenButton extends SimonGPButton{
+public class SimonRedButton extends SimonGPButton{
     @Override
     protected Color getColor() {
-        return( Color.GREEN);
+        return( Color.RED);
     }
 
     @Override
     protected int getX() {
-        return 0;
+        return 300;
     }
 
     @Override
