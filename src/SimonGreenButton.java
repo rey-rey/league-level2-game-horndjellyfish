@@ -1,17 +1,19 @@
+package src;
+
 import java.awt.*;
 
-public class SimonGreenButton extends SimonGPButton{
-    @Override
-    protected Color getColor() {
-        return( Color.GREEN);
+public class SimonGreenButton extends SimonGPButton {
+    //subclass
+    public SimonGreenButton() {
+        _name = "green";
+        _buttonColorNumber = SimonPatternManager.GREEN;
     }
-
-    @Override
+    protected Color getColor() {
+        return (Color.GREEN.darker());
+    }
     protected int getX() {
         return 0;
     }
-
-    @Override
     protected int getY() {
         return 0;
     }
